@@ -7,71 +7,107 @@
 </head>
 <body>
  <header class=”header”>
-    <a><img src="images/гламур.jpg" alt="Логотип" width="180" height="200">Магазин украшений</a>
-    <nav>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог товаров</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Оплата</a></li>
-            <li><a href="#">Отзывы</a></li>
+    <a><img class="__logo" src="images/гламур.jpg" alt="Логотип" width="180" height="200">Магазин украшений</a>
+    <nav class="header__menu">
+        <ul class="menu">
+            <li class="menu__item menu__item--active">
+                <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Каталог товаров</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">О нас</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Доставка</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Оплата</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Отзывы</a>
+            </li>
         </ul>
     </nav>
-    <button>Вход/Регистрация</button>
+    <button class="header_button"> Вход/Регистрация</button>
  </header> 
 
  <main class="main">
     <section class="catalog-menu">
-    <h2>Каталог товаров</h2>  
-    <ul>
-        <li><a href="#">серьги</a></li>
-        <li><a href="#">кольца</a></li>
-        <li><a href="#">колье</a></li>
-        <li><a href="#">цепочки</a></li>
-        <li><a href="#">кулоны</a></li>
-        <li><a href="#">браслеты</a></li>
-        <li><a href="#">подвески</a></li>
-        <li><a href="#">заколки</a></li>
-        <li><a href="#">резинки</a></li>
-        <li><a href="#">броши</a></li>
-        <li><a href="#">часы</a></li>
-        <li><a href="#">очки</a></li>
+    <h2 class="catalog-menu__title">Каталог товаров</h2>  
+    <ul class="catalog-menu__list">
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">серьги</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">кольца</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">колье</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">цепочки</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">кулоны</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">браслеты</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">подвески</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">заколки</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">резинки</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">броши</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">часы</a>
+        </li>
+        <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">очки</a>
+        </li>
     </ul>  
     </section>
     <section class="catalog">
         <h2 class="catalog__title">Каталог</h2>
         <p class="catalog__desc">Описание чего-либо</p>
-        <div class="catalog__title">
-        <div class="catalog__>
+        <div class="catalog__products">
+        <div class="catalog__card">
          <img class="catalog__img" src="images/Frame (4).png" alt="кольца" width="180" height="200">
-         <h3>Золотое кольцо</h3>
-         <span>Описание кольца</span>
-         <p>Цена</p>
+         <h3 class="catalog__name">Золотое кольцо</h3>
+         <span class="catalog__desc">Описание кольца</span>
+         <p class="catalog__price">Цена</p>
         </div>
-        <div>
-            <a><img src="images/подвеска.jpg" alt="подвески" width="180" height="200"></a>
-            <h3>подвеска</h3>
-            <span>Описание подвески</span>
-            <p>Цена</p>
+        <div class="catalog__card">
+            <img class="catalog__img" src="images/подвеска.jpg" alt="подвески" width="180" height="200">
+            <h3 class="catalog__name">подвеска</h3>
+            <span class="catalog__desc">Описание подвески</span>
+            <p class="catalog__price">Цена</p>
         </div>
-        <div>
-            <a><img src="images/серьги.jpg" alt="серьги" width="180" height="200"></a>
-            <h3>Золотые серьги</h3>
-            <span>Описание сережек</span>
-            <p>Цена</p>
+        <div class="catalog__card">
+            <img class="catalog__img" src="images/серьги.jpg" alt="серьги" width="180" height="200">
+            <h3 class="catalog__name">Золотые серьги</h3>
+            <span class="catalog__desc">Описание сережек</span>
+            <p class="catalog__price">Цена</p>
         </div>
-        <div>
-            <a><img src="images/часы.jpg" alt="часы" width="180" height="200"></a>
-            <h3>Часы женские</h3>
-            <span>Описание часов</span>
-            <p>Цена</p>
+        <div class="catalog__card">
+            <img class="catalog__img" src="images/часы.jpg" alt="часы" width="180" height="200">
+            <h3 class="catalog__name">Часы женские</h3>
+            <span class="catalog__desc">Описание часов</span>
+            <p class="catalog__price">Цена</p>
         </div>
-        <div>
-            <a><img src="images/браслеты.jpg" alt="браслеты" width="180" height="200"></a>
-            <h3>Золотые браслеты</h3>
-            <span>Описание браслетов</span>
-            <p>Цена</p>
+        <div class="catalog__card">
+            <img class="catalog__img" src="images/браслеты.jpg" alt="браслеты" width="180" height="200">
+            <h3 class="catalog__name">Золотые браслеты</h3>
+            <span class="catalog__desc">Описание браслетов</span>
+            <p class="catalog__price">Цена</p>
         </div>
         </div>
     </section>
