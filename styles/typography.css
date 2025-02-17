@@ -12,7 +12,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
-    color: #fdb100;
+    color: #00b5fddc;
 }
 
 /* Кнопки */
@@ -23,9 +23,9 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: #fdb100;
+    color: #c7101017;
 
-    border: 1px solid #fdb100;
+    border: 1px solid #e2a712;
     border-radius: 16px;
     background-color: transparent;
 
@@ -37,19 +37,19 @@
 .button:hover,
 .button:focus {
     color: #ffffff;
-    background-color: #fdb100;
+    background-color: #2ca8f0;
 }
 
 .button--accent {
     color: #ffffff;
 
-    background-color: #fdb100;
+    background-color: #44aeec;
 }
 
 .button--accent:hover,
 .button--accent:focus {
-    color: #fdb100;
-    background-color: #ffffff;
+    color: #61a0f1;
+    background-color: #5dc0fa;
 }
 
 .button--link {
@@ -68,8 +68,8 @@
 
 .button--link:hover,
 .button--link:focus {
-    color: #fdb100;
-    background-color: #ffffff;
+    color: #5abef8;
+    background-color: #4cace4;
 
     text-decoration-color: transparent;
 }

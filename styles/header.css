@@ -36,16 +36,16 @@
 
 .header__item-link:hover,
 .header__item-link:focus {
-    color: #3a3c41;
+    color: #042881;
 }
 
 .header__item-link:active {
-    text-shadow: 1px -1px 1px #3a3c41;
+    text-shadow: 1px -1px 1px #0030a7;
 }
 
 .header__item-link--active {
     font-weight: 600;
-    color: #3a3c41;
+    color: #003ace;
 
     cursor: default;
 }
