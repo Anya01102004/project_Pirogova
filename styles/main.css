@@ -1,6 +1,13 @@
+.main__content {
+    max-width: 688px;
+    margin-top: 211px;
+    margin-bottom: 239px;
+
+    z-index: 1;
+}
 .catalog-menu {
     position: fixed;
-    top: 200px;
+    top: 500px;
     left: 50%;
     z-index: 2;
 
@@ -8,7 +15,7 @@
     align-items: center;
     column-gap: 80px;
     width: 100%;
-    padding: 40px 120px;
+    padding: 500px 120px;
 
     transform: translateX(-50%);
 

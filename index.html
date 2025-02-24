@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
- <header class="header">
-    <a><img class="__logo" src="images/гламур.jpg" alt="Логотип" width="180" height="200">Магазин украшений</a>
+ <header class="header container">
+    <a><img class="header__logo" src="images/гламур.jpg" alt="Логотип" width="180" height="200">Магазин украшений</a>
     <nav class="header__menu">
         <ul class="menu">
             <li class="menu__item menu__item--active">
@@ -35,8 +35,9 @@
     <button class="header_button"> Вход/Регистрация</button>
  </header> 
 
- <main class="main">
+ <main class="container" id="main">
     <section class="catalog-menu">
+        <div class="main__content">
     <h2 class="catalog-menu__title">Каталог товаров</h2>  
     <ul class="catalog-menu__list">
         <li class="catalog-menu__item">
@@ -76,11 +77,18 @@
             <a class="catalog-menu__link" href="#">очки</a>
         </li>
     </ul>  
+      </div>
     </section>
-    <section class="catalog">
-        <h2 class="catalog__title">Каталог</h2>
-        <p class="catalog__desc">Описание чего-либо</p>
-        <div class="catalog__products">
+    <section class="section card"  id="card">
+        <h2 class="section__title">Каталог</h2>
+        <p class="section__description">Описание чего-либо</p>
+        <div class="card__list">
+          
+
+
+
+
+
         <div class="catalog__card">
          <img class="catalog__img" src="images/Frame (4).png" alt="кольца" width="180" height="200">
          <h3 class="catalog__name">Золотое кольцо</h3>
