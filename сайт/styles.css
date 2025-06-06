@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eed5d5;
+    color: #333;
+}
+
+header {
+    background-color: #733d4e;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.gallery {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.75fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    margin: 0;
+}
+
+.about-manufacturers, .about-managers {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.about-managers h1, .about-manufacturers h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-managers p, .about-manufacturers p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.manufacturers-list, .managers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.manufacturers-list li, .managers-list li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+#image-description{
+    width: 20%; /*ширина*/
+    float: right; /*описание будет справа от картинок*/
+    border: 3px rgba(209, 17, 97, 0.753) #58072d; /*граница*/
+    padding: 7px; /*внутренний отступ*/
+}
+
+   .block-images{
+    width: 80%; /*ширина*/
+}
+
+.image{
+    height:250px; /*высота картинки*/
+    border-radius: 10px; /*скругленная граница*/
+    box-shadow: 0px 0px 9px #b1b1b1; /*тень*/
+}
+   
+.burning-sale {
+    box-sizing: border-box;
+    background-color: rgba(250, 177, 216, 0.918);
+    width: 100%;
+    padding: 8px;
+    }
+    .burning-sale p {
+    text-align: center;
+    }
+    .burning-sale img {
+    text-align: center;
+    margin: 5px auto;
+    display: block;
+    width: 300px;
+}
