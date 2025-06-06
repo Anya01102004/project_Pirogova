@@ -1,150 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>магазин украшений</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>iSuAme - Главная</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <header class="header container">
-    <a><img class="header__logo" src="images/гламур.jpg" alt="Логотип" width="180" height="200">Магазин украшений</a>
-    <nav class="header__menu">
-        <ul class="menu">
-            <li class="menu__item menu__item--active">
-                <a class="menu__link" href="index.html">Главная</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#">Каталог товаров</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#">О нас</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#">Доставка</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#">Оплата</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#">Отзывы</a>
-            </li>
+<header>
+    <div class="logo">iSuAme</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="popular.html">Популярное</a></li>
+            <li><a href="combo.html">Комбо</a></li>
+            <li><a href="manufacturers.html">О производителях</a></li>
+            <li><a href="managers.html">О руководителях</a></li>
         </ul>
     </nav>
-    <button class="header_button"> Вход/Регистрация</button>
- </header> 
-
- <main class="container" id="main">
-    <section class="catalog-menu">
-        <div class="main__content">
-    <h2 class="catalog-menu__title">Каталог товаров</h2>  
-    <ul class="catalog-menu__list">
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">серьги</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">кольца</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">колье</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">цепочки</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">кулоны</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">браслеты</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">подвески</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">заколки</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">резинки</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">броши</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">часы</a>
-        </li>
-        <li class="catalog-menu__item">
-            <a class="catalog-menu__link" href="#">очки</a>
-        </li>
-    </ul>  
-      </div>
+</header>
+<main>
+    <div class="burning-sale">
+        <p>Промокод на скидку исчезнет через <span id="seconds-left"></span>
+        секунд!</p>
+        <img src="images/promocode.png" alt="">
+        </div>
+        <script src="script.js"></script>
+           <div id="image-description">Наведите мышь на картинку и тут появится
+        ее описание</div>
+        <div class="block-images">
+         <img onmouseover="show_description(0)"
+        onmouseout="hide_description()" class="image" src="images/store/set 1.jpg">
+         <img onmouseover="show_description(1)"
+        onmouseout="hide_description()" class="image" src="images/store/set 2.jpg">
+         <img onmouseover="show_description(2)"
+        onmouseout="hide_description()" class="image" src="images/store/set 3.jpg">
+        <img onmouseover="show_description(3)"
+        onmouseout="hide_description()" class="image" src="images/store/set 4.jpg">
+        <img onmouseover="show_description(4)"
+        onmouseout="hide_description()" class="image" src="images/store/set 5.jpg">
+        <img onmouseover="show_description(5)"
+        onmouseout="hide_description()" class="image" src="images/store/set 6.jpg">
+        </div>
+        <script src="script.js"></script>
+    <section class="about">
+        <img src="images/logo.jpg" style="max-height:100%; max-width:100%" alt="logo"/>
+        <p>
+            Добро пожаловать в iSuAme, лучший выбор модной женской одежды. В iSuAme мы верим в расширение возможностей
+            женщин через моду, которая бросается в глаза. Наши коллекции составлены таким образом, чтобы предлагать
+            последние тенденции с уникальными нотками, которые помогут вам выделиться из толпы. Откройте для себя смелый
+            дизайн, яркие цвета и материалы высочайшего качества в каждом изделии. Присоединяйтесь к нам и прославьте
+            индивидуальность и стиль. </p>
     </section>
-    <section class="section card"  id="card">
-        <h2 class="section__title">Каталог</h2>
-        <p class="section__description">Описание чего-либо</p>
-        <div class="card__list">
-          
-
-
-
-
-
-        <div class="catalog__card">
-         <img class="catalog__img" src="images/Frame (4).png" alt="кольца" width="180" height="200">
-         <h3 class="catalog__name">Золотое кольцо</h3>
-         <span class="catalog__desc">Описание кольца</span>
-         <p class="catalog__price">Цена</p>
-        </div>
-        <div class="catalog__card">
-            <img class="catalog__img" src="images/подвеска.jpg" alt="подвески" width="180" height="200">
-            <h3 class="catalog__name">подвеска</h3>
-            <span class="catalog__desc">Описание подвески</span>
-            <p class="catalog__price">Цена</p>
-        </div>
-        <div class="catalog__card">
-            <img class="catalog__img" src="images/серьги.jpg" alt="серьги" width="180" height="200">
-            <h3 class="catalog__name">Золотые серьги</h3>
-            <span class="catalog__desc">Описание сережек</span>
-            <p class="catalog__price">Цена</p>
-        </div>
-        <div class="catalog__card">
-            <img class="catalog__img" src="images/часы.jpg" alt="часы" width="180" height="200">
-            <h3 class="catalog__name">Часы женские</h3>
-            <span class="catalog__desc">Описание часов</span>
-            <p class="catalog__price">Цена</p>
-        </div>
-        <div class="catalog__card">
-            <img class="catalog__img" src="images/браслеты.jpg" alt="браслеты" width="180" height="200">
-            <h3 class="catalog__name">Золотые браслеты</h3>
-            <span class="catalog__desc">Описание браслетов</span>
-            <p class="catalog__price">Цена</p>
-        </div>
-        </div>
-    </section>
- </main>
-
- <footer> 
-    <section class="links">
-        <ul>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Сертификаты</a></li>
-            <li><a href="#">Категории товаров</a></li>
-            <li><a href="#">Личный раздел</a></li>
-            <li><a href="#">Информация</a></li>
-        </ul>
-    </section>
-    <section class="contacts">
-        <ul>
-            <li><a href="#">Номер телефона</a></li>
-            <li><a href="#">watsapp</a></li>
-            <li><a href="#">telegram</a></li>
-            <li><a href="#">vk</a></li>
-        </ul>
-    </section>
-    <section class="authors"><p>Пирогова Анна, Бойтуш Анастасия, Коврижных Жанна, Белова Наталья, НК-35 
-    </p>
-</section>
- </footer>
+</main>
 </body>
-
 </html>
