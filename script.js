@@ -77,7 +77,7 @@ function changeSecondLeft() {
     классом burning-sale*/
     let p = document.querySelector(".burning-sale p");
     //Заменяем содержимое тега на новый текст
-    p.innerHTML = " ЛОШАРА НЕ УСПЕЛ!";
+    p.innerHTML = "Ха-ха-ха, НЕ УСПЕЛ!";
     /*Находим на странице тег картинки img, расположенный внутри тега с
 классом burning-sale*/
 let image = document.querySelector(".burning-sale img");
@@ -85,3 +85,58 @@ let image = document.querySelector(".burning-sale img");
 элемент становится прозрачным и его не видно на странице.*/
 image.style["opacity"] = "0";
 }
+// Preloader страницы
+const preloader = document.querySelector('.preloader');
+const content = document.querySelectorAll('.loader__content');
+if (preloader && content) {
+    setTimeout(() => {
+        // Скрываем прелоадер
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+
+        // Показываем контент
+       content.style.display = 'block';
+
+        // Удаляем элемент из DOM
+        preloader.remove();
+    }, 1000); // Задержка 3 секунды
+}
+// Кнопка прокрутки вверх
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    // Показываем кнопку при прокрутке вниз
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    });
+
+    // Прокрутка вверх при клике
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+// объявляем переменную sliders,куда помещаем элемент с классом swiper
+const sliders = document.querySelector('.swiper');
+//проверяем существует ли элемент
+    if (sliders) {  
+        const swiper = new Swiper(sliders, {
+            // Пагинация
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Навигационные стрелки
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+
+

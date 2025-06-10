@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iSuAme - Главная</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
 <header>
     <div class="logo">iSuAme</div>
     <nav>
@@ -22,7 +26,7 @@
 </header>
 <main>
     <div class="burning-sale">
-        <p>Промокод на скидку исчезнет через <span id="seconds-left"></span>
+        <p class="p">Промокод на скидку исчезнет через <span id="seconds-left"></span>
         секунд!</p>
         <img src="images/promocode.png" alt="">
         </div>
@@ -43,16 +47,56 @@
         <img onmouseover="show_description(5)"
         onmouseout="hide_description()" class="image" src="images/store/set 6.jpg">
         </div>
-        <script src="script.js"></script>
+        
     <section class="about">
         <img src="images/logo.jpg" style="max-height:100%; max-width:100%" alt="logo"/>
-        <p>
+        <p class="p">
             Добро пожаловать в iSuAme, лучший выбор модной женской одежды. В iSuAme мы верим в расширение возможностей
             женщин через моду, которая бросается в глаза. Наши коллекции составлены таким образом, чтобы предлагать
             последние тенденции с уникальными нотками, которые помогут вам выделиться из толпы. Откройте для себя смелый
             дизайн, яркие цвета и материалы высочайшего качества в каждом изделии. Присоединяйтесь к нам и прославьте
             индивидуальность и стиль. </p>
     </section>
+    <!-- Swiper -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> <img class="promo__image" src="images/image35.png" alt="Изображение рекламного фото сайта 1" width="600"
+        height="300"></div>
+        <div class="swiper-slide"> <img class="promo__image" src="images/image36.png" alt="Изображение рекламного фото сайта 1" width="1000"
+            height="300"></div>
+            <div class="swiper-slide"> <img class="promo__image" src="images/image35.png" alt="Изображение рекламного фото сайта 1" width="600"
+                height="300"></div>
+      <div class="swiper-slide"> <img class="promo__image" src="images/image36.png" alt="Изображение рекламного фото сайта 1" width="1000"
+        height="300"></div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Swiper JS -->
 </main>
+<footer class="footer">
+    <p class="p">Информация о нас</p>
+    <p class="p">Пирогова Анна</p>
+    <p class="p">Белова Наталия</p>
+    <p class="p">Бойтуш Анастасия</p>
+    <p class="p">Коврижных Жанна</p>
+</footer>
+ <!-- Scrollup -->
+ <button id="scrollToTop" class="scroll-top">
+    <svg width="35px" height="35px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.1464 6.85355C11.3417 7.04882 11.6583 7.04882 11.8536 6.85355C12.0488 6.65829 12.0488 6.34171 11.8536 6.14645L7.85355 2.14645C7.65829 1.95118 7.34171 1.95118 7.14645 2.14645L3.14645 6.14645C2.95118 6.34171 2.95118 6.65829 3.14645 6.85355C3.34171 7.04882 3.65829 7.04882 3.85355 6.85355L7.5 3.20711L11.1464 6.85355ZM11.1464 12.8536C11.3417 13.0488 11.6583 13.0488 11.8536 12.8536C12.0488 12.6583 12.0488 12.3417 11.8536 12.1464L7.85355 8.14645C7.65829 7.95118 7.34171 7.95118 7.14645 8.14645L3.14645 12.1464C2.95118 12.3417 2.95118 12.6583 3.14645 12.8536C3.34171 13.0488 3.65829 13.0488 3.85355 12.8536L7.5 9.20711L11.1464 12.8536Z"
+            fill="#ffffff" />
+    </svg>
+    <span class="visually-hidden">Наверх</span>
+</button>
+<!--/ Scrollup -->
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
