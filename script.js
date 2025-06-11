@@ -118,9 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollToTopBtn.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
-});
 
-// объявляем переменную sliders,куда помещаем элемент с классом swiper
+    // объявляем переменную sliders,куда помещаем элемент с классом swiper
 const sliders = document.querySelector('.swiper');
 //проверяем существует ли элемент
     if (sliders) {  
@@ -138,5 +137,8 @@ const sliders = document.querySelector('.swiper');
             },
         });
     }
+
+});
+
 
 
