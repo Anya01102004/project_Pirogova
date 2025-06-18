@@ -1,29 +1,39 @@
-/* Подключение стилей относящихся к preloader */
+/* Общие стили */
 @import "preloader.css";
-/* Подключение стилей относящихся к preloader */
 @import "animation.css";
+
+:root {
+    --primary-color: #e91e63; /* Ярко-розовый */
+    --secondary-color: #fce4ec; /* Очень светлый розовый */
+    --text-color: #333;
+    --accent-color: #ff4081; /* Более насыщенный розовый (акцент) */
+    --border-radius: 8px;
+}
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #eed5d5;
-    color: #333;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
+/* Шапка */
 header {
-    background-color: #733d4e;
+    background-color: var(--primary-color);
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
-    /*justify-content: space-between;*/
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    margin-right: 3rem;
+    text-decoration: none;
+    color: #fff;
 }
 
 nav ul {
@@ -34,152 +44,249 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1rem;
+    margin: 0 1rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Основной контент */
 main {
     padding: 2rem;
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.about {
-    max-width: 600px;
-    margin: 0 auto;
+/* Секции (About, Динамический блок) */
+.about,
+.dynamic-section {
     background-color: #fff;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.gallery {
-    width: 50%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 0.75fr));
-    gap: 1rem;
+.dynamic-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
 }
 
-.gallery-item {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.gallery-item img {
+.cta-button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Image Description Styles */
+.image-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#image-description {
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-h1 {
-    margin: 0;
-}
-
-.about-manufacturers, .about-managers {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.about-managers h1, .about-manufacturers h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.block-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px;
 }
 
-.about-managers p, .about-manufacturers p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+.image {
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
-.manufacturers-list, .managers-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.image:hover {
+    transform: scale(1.1);
 }
 
-.manufacturers-list li, .managers-list li {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-}
-
-#image-description{
-    width: 20%; /*ширина*/
-    float: right; /*описание будет справа от картинок*/
-    border: 3px rgba(209, 17, 97, 0.753) #58072d; /*граница*/
-    padding: 7px; /*внутренний отступ*/
-}
-
-   .block-images{
-    width: 80%; /*ширина*/
-}
-
-.image{
-    height:250px; /*высота картинки*/
-    border-radius: 10px; /*скругленная граница*/
-    box-shadow: 0px 0px 9px #b1b1b1; /*тень*/
-}
-   
-.burning-sale {
-    box-sizing: border-box;
-    background-color: rgba(250, 177, 216, 0.918);
-    width: 100%;
-    padding: 8px;
-    }
-    .burning-sale p {
-    text-align: center;
-    }
-    .burning-sale img {
-    text-align: center;
-    margin: 5px auto;
-    display: block;
-    width: 300px;
-}
-
+/* Футер */
 .footer {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
 }
+
+/* Scroll-to-Top Button */
 .scroll-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #ff6600;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
     display: none;
+    z-index: 1000;
 }
+
+.scroll-top:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Swiper */
 .swiper {
     width: 100%;
-    height: 100%;
-  }
+    margin-bottom: 2rem;
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--primary-color) !important;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    border: 8px solid var(--primary-color); /* Цвет рамки */
+    border-top: 8px solid #fff; /* Цвет верхней части (анимированный) */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Image Description Styles */
+.image-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#image-description {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.block-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.image {
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для развернутого изображения */
+.image.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(10.0); /* Увеличиваем масштаб в 2 раза */
+    max-width: 80%;
+    max-height: 80%;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid #fff;
+    border-radius: 10px;
+    object-fit: contain; /* Чтобы изображение помещалось в контейнер */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+}
